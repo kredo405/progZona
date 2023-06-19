@@ -26,6 +26,7 @@ import PHP from "../../assets/languageImgs/PHP.png";
 import mysql from "../../assets/languageImgs/mysql.png";
 import laravel from "../../assets/languageImgs/laravel.png";
 import WordPress from "../../assets/languageImgs/WordPress.png";
+import "../../assets/swiper.css";
 
 export const SliderMain = () => {
     return (
@@ -40,12 +41,14 @@ export const SliderMain = () => {
                 spaceBetween={50}
                 loop={true}
                 slidesPerView={window.innerWidth > 768 ? 3 : 1}
-                navigation
+                pagination={{
+                    dynamicBullets: true,
+                }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log("slide change")}
             >
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -64,7 +67,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -84,7 +87,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -104,7 +107,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -124,7 +127,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -144,7 +147,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -164,7 +167,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -184,7 +187,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -204,7 +207,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5 font-mono">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5 font-mono">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -224,7 +227,7 @@ export const SliderMain = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -244,7 +247,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -263,7 +266,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -282,7 +285,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -302,7 +305,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -322,7 +325,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -342,7 +345,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -361,7 +364,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -381,7 +384,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -401,7 +404,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"
@@ -421,7 +424,7 @@ export const SliderMain = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="flex flex-col justify-center items-center mx-10 mb-5">
+                    <div className="flex flex-col justify-center items-center mx-2 mb-5">
                         <div className="h-6/12 flex justify-center">
                             <img
                                 className="w-[100px] h-[100px]"

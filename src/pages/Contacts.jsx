@@ -15,7 +15,7 @@ const Contacts = () => {
                     готовы помочь!
                 </p>
             </div>
-            <div className="flex justify-center px-2">
+            <div className="flex justify-center px-2 py-10">
                 {/* <div className="hidden md:flex justify-end items-start w-2/12">
                     <img src={contacts1} alt="Контакты" />
                 </div> */}

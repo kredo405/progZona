@@ -8,21 +8,21 @@ export const Header = () => {
                     <span className="text-orange-500"> ProgZona </span>— школа
                     веб разработки
                 </h1>
-                <p className="pl-4 px-2 py-2 text-lg text-slate-100 font-mono text-center lg:text-start">
+                <p className=" px-4 py-2 text-lg text-slate-100 font-mono  lg:text-start">
                     Мы рады приветствовать вас в нашей школе, где вы сможете
                     освоить различные языки программирования и стать настоящим
                     экспертом в веб-разработке. У нас вы найдете обучение по
                     таким популярным технологиям, как HTML, CSS, JavaScript,
                     Node.js, React, Vue.js, PHP, Laravel и др.
                 </p>
-                <p className="lg:pl-4 px-2 py-2 text-lg text-slate-100 font-mono text-center lg:text-start">
+                <p className=" px-4 py-2 text-lg text-slate-100 font-mono r lg:text-start">
                     Не важно, являетесь ли вы начинающим или уже имеете
                     определенный опыт в программировании, наша школа предлагает
                     курсы для всех уровней. Мы стремимся создать поддерживающую
                     и вдохновляющую среду, в которой вы сможете развиваться и
                     достигать новых высот в своей карьере в IT.
                 </p>
-                <p className="pl-4 px-2 py-2 text-lg text-slate-100 font-mono text-center lg:text-start">
+                <p className="px-4 py-2 text-lg text-slate-100 font-mono  lg:text-start">
                     Присоединяйтесь к нам сегодня и начните свое путешествие в
                     мир программирования!
                 </p>

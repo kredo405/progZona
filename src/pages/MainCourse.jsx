@@ -15,8 +15,8 @@ const MainCourse = () => {
     return (
         <>
             <Nav />
-            <div className="px2 lg:px-10 mt-10">
-                <div className="flex flex-col lg:flex-row justify-between px-5 lg:px-20 mb-20">
+            <div className="lg:px-10 mt-10">
+                <div className="flex flex-col lg:flex-row justify-between px-5 lg:px-20 mb-5 md:mb-20">
                     <div className="w-full lg:w-6/12">
                         <div>
                             <h2 className="font-mono text-2xl text-slate-300 font-bold">

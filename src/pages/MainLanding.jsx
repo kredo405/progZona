@@ -30,7 +30,9 @@ const MainLanding = () => {
                 isRight={false}
                 image={ph2}
             />
-            <SliderMain />
+            <div className="w-full">
+                <SliderMain />
+            </div>
 
             <div className="rounded-xl border-2 border-gray-800 mx-5 bg-[#292c35] mt-10">
                 <h2 className="font-mono text-3xl text-slate-100 text-center px-10 py-3 font-bold mt-5 underline decoration-2 decoration-orange-600 underline-offset-8">
