@@ -35,7 +35,7 @@ const MainCourse = () => {
                             <Link to="/auth">
                                 <span
                                     onClick={() => navigate("/auth")}
-                                    className="px-20 py-5 rounded-lg hover:bg-orange-700 text-xl bg-orange-600 font-mono font-semibold text-slate-100"
+                                    className="px-10 sm:px-20 py-5 rounded-lg hover:bg-orange-700 text-xl bg-orange-600 font-mono font-semibold text-slate-100"
                                 >
                                     Начать учиться
                                 </span>
@@ -80,7 +80,7 @@ const MainCourse = () => {
                                 <Link to="/auth">
                                     <span
                                         onClick={() => navigate("/auth")}
-                                        className="px-20 py-5 rounded-lg hover:bg-orange-700 text-xl  bg-orange-600 font-mono font-semibold text-slate-100"
+                                        className="px-10 sm:px-20 py-5 rounded-lg hover:bg-orange-700 text-xl  bg-orange-600 font-mono font-semibold text-slate-100"
                                     >
                                         Начать учиться
                                     </span>
