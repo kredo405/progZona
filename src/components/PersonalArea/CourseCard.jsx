@@ -11,7 +11,10 @@ const CourseCard = ({ img, title }) => {
             </div>
 
             <div className="flex justify-center md:justify-end w-7/12  md:w-5/12 items-center md:mr-2">
-                <Link className="py-4 px-2 md:px-3 bg-orange-600 hover:bg-orange-700 text-slate-100 text-sm md:text-base font-mono font-semibold rounded-lg">
+                <Link
+                    to="/presonalAria/courseLanding"
+                    className="py-4 px-2 md:px-3 bg-orange-600 hover:bg-orange-700 text-slate-100 text-sm md:text-base font-mono font-semibold rounded-lg"
+                >
                     Продолжить Учиться
                 </Link>
             </div>

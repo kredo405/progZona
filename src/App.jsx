@@ -10,6 +10,7 @@ import PersonalArea from "./pages/PersonalArea";
 import MyEducation from "./components/PersonalArea/MyEducation";
 import Statistic from "./components/PersonalArea/Statistic";
 import AllCourse from "./components/PersonalArea/AllCourses";
+import CourseLanding from "./components/PersonalArea/CourseLanding";
 
 function App() {
     return (
@@ -33,6 +34,10 @@ function App() {
                     <Route
                         path="/presonalAria/AllCourse"
                         element={<AllCourse />}
+                    />
+                    <Route
+                        path="/presonalAria/courseLanding"
+                        element={<CourseLanding />}
                     />
                 </Route>
             </Routes>
