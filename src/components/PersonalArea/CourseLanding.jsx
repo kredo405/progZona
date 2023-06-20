@@ -25,10 +25,48 @@ const CourseLanding = () => {
                             elit. Consequatur qui assumenda quae debitis
                             suscipit et vel fugit fugiat incidunt repellat?
                         </p>
+                        <div className="flex">
+                            <div className="text-slate-100 flex py-4 mr-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="w-6 h-6"
+                                >
+                                    <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z" />
+                                </svg>
+                                <span className="text-slate-100 px-2 font-mono">
+                                    0 студентов
+                                </span>
+                            </div>
+                            <div className="text-slate-100 flex py-4 ml-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="w-6 h-6"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+
+                                <span className="text-slate-100 px-2 font-mono">
+                                    Сложноть:{" "}
+                                    <span className="text-orange-500 font-mono">
+                                        С нуля
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
                         <div className="items-center text-sm flex justify-center lg:justify-start mt-10">
-                            <Link to="/auth">
+                            <Link to="/presonalAria/course/lesson">
                                 <span
-                                    onClick={() => navigate("/auth")}
+                                    onClick={() =>
+                                        navigate("/presonalAria/course/lesson")
+                                    }
                                     className="px-10 sm:px-20 py-5 rounded-lg hover:bg-orange-700 text-xl bg-orange-600 font-mono font-semibold text-slate-100"
                                 >
                                     Начать учиться
@@ -149,9 +187,13 @@ const CourseLanding = () => {
                                 aliquid incidunt!
                             </p>
                             <div className="items-center text-sm flex justify-center lg:justify-start mt-10">
-                                <Link to="/auth">
+                                <Link to="/presonalAria/course/lesson">
                                     <span
-                                        onClick={() => navigate("/auth")}
+                                        onClick={() =>
+                                            navigate(
+                                                "/presonalAria/course/lesson"
+                                            )
+                                        }
                                         className="px-10 sm:px-20 py-5 rounded-lg hover:bg-orange-700 text-xl  bg-orange-600 font-mono font-semibold text-slate-100"
                                     >
                                         Начать учиться
