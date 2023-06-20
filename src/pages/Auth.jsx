@@ -1,8 +1,10 @@
 import { Nav } from "../components/MainLanding/Nav";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Auth = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Nav />
@@ -62,7 +64,12 @@ const Auth = () => {
                                 Забыли пароль?
                             </a>
                         </div>
-                        <button className="w-full px-4 py-2 text-slate-100 font-medium bg-orange-600 hover:bg-orange-500  rounded-lg duration-150">
+                        <button
+                            onClick={() =>
+                                navigate("/presonalAria/myEducation")
+                            }
+                            className="w-full px-4 py-2 text-slate-100 font-medium bg-orange-600 hover:bg-orange-500  rounded-lg duration-150"
+                        >
                             Войти
                         </button>
                     </form>

@@ -1,20 +1,14 @@
-import { Nav } from "../components/MainLanding/Nav";
-import SortCourses from "../components/MainLanding/SortCourses";
-import CourseCard from "../components/MainLanding/CourseCard";
+import CourseCard from "../MainLanding/CourseCard";
 
-const MainCourses = () => {
+const AllCourse = () => {
     return (
         <>
-            <Nav current="courses" />
+            <div className="mt-10 border-b-2 border-solid border-slate-700 py-3">
+                <h2 className="text-slate-100 font-mono font-bold text-4xl px-5">
+                    Все курсы
+                </h2>
+            </div>
             <div>
-                <h1 className="font-mono text-3xl md:text-5xl text-slate-100 text-center px-3 py-3 font-bold">
-                    Все
-                    <span className="text-orange-500"> Курсы </span>
-                    по программированию
-                </h1>
-                <div>
-                    <SortCourses />
-                </div>
                 <section className=" mx-auto px-4 max-w-screen-xl md:px-8 py-10">
                     <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                         <CourseCard
@@ -84,7 +78,7 @@ const MainCourses = () => {
                         />
                         <CourseCard
                             href="/course"
-                            img="https://www.campusmvp.es/recursos/image.axd?picture=banner-asp-net-core-750x300.png"
+                            img="https://www.simplilearn.com/ice9/free_resources_article_thumb/Web_Forms_in_ASP_NET.jpg"
                             title="ASP.NET Core"
                             desc="ASP.NET Core - мощный фреймворк для создания современных веб-приложений с безупречной интеграцией серверной и клиентской функциональности."
                             level="С нуля"
@@ -120,4 +114,4 @@ const MainCourses = () => {
     );
 };
 
-export default MainCourses;
+export default AllCourse;
