@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Themes = () => {
     const themes = [
         {
@@ -84,20 +86,21 @@ const Themes = () => {
     const elements = themes.map((el, idx) => {
         return (
             <div className="flex flex-col px-5 py-5 mx-2 md:mx-20 rounded-2xl bg-[#353943] mb-5">
-                <div className="flex items-center py-3">
-                    <span className="text-slate-100 pr-5 font-mono font-bold text-xl">
+                <div className="flex items-center py-3 ">
+                    <span className="text-slate-100 pr-5 font-mono font-bold text-xl py-2 border-b border-orange-600">
                         {idx + 1}
                     </span>
-                    <h5 className="text-slate-100 font-mono font-bold text-xl border-b border-orange-600">
+                    <h5 className="text-slate-100 font-mono font-bold text-xl py-2 border-b border-orange-600">
                         {el.title}
                     </h5>
                 </div>
                 <ul className="px-7">
                     {el.subtopics.map((item, i) => {
                         return (
-                            <li className="text-slate-300">
-                                <span className="font-bold">{i + 1}) </span>
-                                <span className="font-mono">{item}</span>
+                            <li className="text-slate-300 font-mono text-lg hover:text-orange-500">
+                                <Link to="/presonalAria/course/lesson">
+                                    {i + 1} {item}
+                                </Link>
                             </li>
                         );
                     })}

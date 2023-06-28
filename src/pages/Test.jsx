@@ -4,73 +4,70 @@ import { useNavigate } from "react-router-dom";
 
 const tests = [
     {
-        question: "Что такое HTML и для чего он используется в веб-разработке?",
+        question:
+            "Какой оператор используется для проверки равенства значений и типов в JavaScript?",
         answer: [
             {
-                name: "HTML - язык программирования для создания бэкэнд-серверов.",
+                name: "==",
             },
             {
-                name: "HTML - язык разметки для создания структуры веб-страниц.",
+                name: "===",
             },
             {
-                name: "HTML - язык для создания динамических и интерактивных элементов на веб-страницах.",
+                name: "=",
+            },
+            {
+                name: "!=",
             },
         ],
-        correctAnswer:
-            "HTML - язык разметки для создания структуры веб-страниц.",
-    },
-    {
-        question: "Какова основная структура HTML-документа?",
-        answer: [
-            {
-                name: "<!DOCTYPE html>, <head>, <body>",
-            },
-            {
-                name: "<html>, <head>, <title>, <body>",
-            },
-            {
-                name: "<head>, <body>, <footer>",
-            },
-        ],
-        correctAnswer: "<!DOCTYPE html>, <head>, <body>",
+        correctAnswer: "===",
     },
     {
         question:
-            "Какие элементы HTML отвечают за объявление типа документа, заголовок страницы и содержимое страницы?",
+            "Какой оператор используется для объединения двух или более условий в одном выражении?",
         answer: [
             {
-                name: "<doctype>, <header>, <body>",
+                name: "|| (логическое 'или')",
             },
             {
-                name: "<!DOCTYPE html>, <title>, <body>",
+                name: "&& (логическое 'и')",
             },
             {
-                name: "<header>, <title>, <body>",
+                name: "! (логическое 'не')",
+            },
+            {
+                name: "= (оператор присваивания)",
             },
         ],
-        correctAnswer: "<!DOCTYPE html>, <title>, <body>",
+        correctAnswer: "&& (логическое 'и')",
     },
     {
         question:
-            "Какие языки и технологии могут использоваться вместе с HTML для добавления стилей и интерактивности на веб-страницу?",
+            "Какой будет результат выполнения следующего кода: var x = 10; var y = '10'; console.log(x == y);?",
         answer: [
             {
-                name: "CSS и JavaScript",
+                name: "true",
             },
             {
-                name: "Python и PHP",
+                name: "false",
             },
             {
-                name: " Ruby и C#",
+                name: "NaN",
+            },
+            {
+                name: "Ошибка выполнения",
             },
         ],
-        correctAnswer: "CSS и JavaScript",
+        correctAnswer: "true",
     },
 ];
 
 const Test = () => {
     const [questionNumber, setQuestionNumber] = useState(0);
-    const [userResponse, setUserResponse] = useState("");
+    const [userResponse, setUserResponse] = useState(
+        tests[questionNumber].answer[0].name
+    );
+    const [selectedPayment, setSelectedPayment] = useState(0);
     const [messageApi, contextHolder] = message.useMessage();
 
     const navigate = useNavigate();
@@ -80,6 +77,8 @@ const Test = () => {
             if (userResponse === tests[questionNumber].correctAnswer) {
                 success();
                 setQuestionNumber(questionNumber + 1);
+                setUserResponse(tests[questionNumber + 1].answer[0].name);
+                setSelectedPayment(0);
             } else {
                 error();
             }
@@ -100,6 +99,10 @@ const Test = () => {
             type: "success",
             content: "Верно!!!",
         });
+    };
+
+    const handlePaymentChange = (e) => {
+        setSelectedPayment(Number(e.target.value));
     };
 
     return (
@@ -126,9 +129,9 @@ const Test = () => {
                                         <input
                                             id={item.name}
                                             type="radio"
-                                            defaultChecked={
-                                                idx == 1 ? true : false
-                                            }
+                                            checked={selectedPayment === idx}
+                                            onChange={handlePaymentChange}
+                                            value={idx}
                                             name="payment"
                                             className="sr-only peer"
                                         />

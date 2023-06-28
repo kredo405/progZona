@@ -1,6 +1,4 @@
 import CourseCard from "./CourseCard";
-import html from "../../assets/languageImgs/html.png";
-import Css from "../../assets/languageImgs/css.png";
 import js from "../../assets/languageImgs/js.png";
 import reactImg from "../../assets/languageImgs/reactImg.png";
 import nodejs from "../../assets/languageImgs/nodeImg.png";
@@ -15,8 +13,6 @@ const MyEducation = () => {
                 </h2>
             </div>
             <div className="py-5">
-                <CourseCard img={html} title="HTML" />
-                <CourseCard img={Css} title="CSS" />
                 <CourseCard img={js} title="JavaScript" />
                 <CourseCard img={reactImg} title="React" />
                 <CourseCard img={nodejs} title="Node JS" />

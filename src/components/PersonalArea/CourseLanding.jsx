@@ -17,7 +17,7 @@ const CourseLanding = () => {
                         </div>
                         <div className="flex justify-start py-5">
                             <h1 className="font-mono text-5xl lg:text-7xl text-start text-slate-100 font-bold">
-                                HTML
+                                JavaScript
                             </h1>
                         </div>
                         <p className="font-mono text-lg text-slate-400 font-bold">
@@ -62,10 +62,10 @@ const CourseLanding = () => {
                             </div>
                         </div>
                         <div className="items-center text-sm flex justify-center lg:justify-start mt-10">
-                            <Link to="/presonalAria/course/lesson">
+                            <Link to="/presonalAria/themes">
                                 <span
                                     onClick={() =>
-                                        navigate("/presonalAria/course/lesson")
+                                        navigate("/presonalAria/themes")
                                     }
                                     className="px-10 sm:px-20 py-5 rounded-lg hover:bg-orange-700 text-xl bg-orange-600 font-mono font-semibold text-slate-100"
                                 >
@@ -105,7 +105,7 @@ const CourseLanding = () => {
                             </span>
                             <div>
                                 <h5 className="text-slate-100 text-xl font-mono font-bold mb-5">
-                                    Html теги
+                                    Введение
                                 </h5>
                                 <p className="text-slate-400 font-mono">
                                     Lorem ipsum, dolor sit amet consectetur
@@ -187,12 +187,10 @@ const CourseLanding = () => {
                                 aliquid incidunt!
                             </p>
                             <div className="items-center text-sm flex justify-center lg:justify-start mt-10">
-                                <Link to="/presonalAria/course/lesson">
+                                <Link to="//presonalAria/themes">
                                     <span
                                         onClick={() =>
-                                            navigate(
-                                                "/presonalAria/course/lesson"
-                                            )
+                                            navigate("//presonalAria/themes")
                                         }
                                         className="px-10 sm:px-20 py-5 rounded-lg hover:bg-orange-700 text-xl  bg-orange-600 font-mono font-semibold text-slate-100"
                                     >

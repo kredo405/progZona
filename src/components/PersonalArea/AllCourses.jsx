@@ -13,22 +13,6 @@ const AllCourse = () => {
                     <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                         <CourseCard
                             href="/presonalAria/courseLanding"
-                            img="https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/HTML-Blog-Cover.png"
-                            title="HTML"
-                            desc="
-                            Освойте основы HTML и создайте красивые и структурированные веб-страницы с нашим курсом по HTML."
-                            level="С нуля"
-                        />
-                        <CourseCard
-                            href="/presonalAria/courseLanding"
-                            img="https://www.bitdegree.org/learn/storage/media/images/css-tutorial-img1-01.o.png"
-                            title="CSS"
-                            desc="
-                            Курс по CSS предлагает вам углубленное погружение в язык стилей, чтобы вы смогли создавать красивые и привлекательные веб-дизайны, применять различные стилевые свойства и разработать свой собственный уникальный стиль."
-                            level="С нуля"
-                        />
-                        <CourseCard
-                            href="/presonalAria/courseLanding"
                             img="https://joseordaz.com/wp-content/uploads/2022/01/javascript.jpg"
                             title="JavaScript"
                             desc="Курс по JavaScript предлагает вам полное погружение в мир языка программирования JavaScript, чтобы вы могли освоить его основы и применять их для создания интерактивных веб-приложений и динамического контента на веб-страницах."

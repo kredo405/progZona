@@ -1,55 +1,15 @@
 import { useSelector } from "react-redux";
-import { Tabs } from "antd";
-// import Editor from "@monaco-editor/react";
-import EditorCode from "../components/PersonalArea/EditorCode";
-import { Tree } from "antd";
 import { useState } from "react";
-
-const { DirectoryTree } = Tree;
+import EditorCode from "../components/PersonalArea/EditorCode";
 
 const CodeSimulator = () => {
     const state = useSelector((state) => state);
+    const [content, setContent] = useState("");
     const task = {
-        task: "Напишите базовую структуру HTML-документа",
+        task: "Напишите программу, которая приветствует пользователя",
         description:
-            "Напишите базовую html страницу в которой title будет 'Базовая страница', заголовок первого уровня 'Привет, мир!' и параграф 'Это пример веб-страницы, созданной с помощью HTML.'",
+            "Вам необходимо создать программу, которая приветствует пользователя в зависимости от его возраста. Если пользователь младше 18 лет, программа должна выводить сообщение 'Привет, ребенок!', а если пользователь 18 лет или старше, то сообщение должно быть 'Привет, взрослый!'.",
         complexity: "Легко",
-    };
-
-    const treeData = [
-        {
-            title: "BaseHtml",
-            key: "0-0",
-            children: [
-                {
-                    title: "Index.html",
-                    key: "0-0-1",
-                    isLeaf: true,
-                },
-            ],
-        },
-        {
-            title: "files",
-            key: "0-1",
-            children: [
-                {
-                    title: "build.js",
-                    key: "0-1-0",
-                    isLeaf: true,
-                },
-            ],
-        },
-    ];
-
-    const onSelect = (keys, info) => {
-        console.log("Trigger Select", keys, info);
-    };
-    const onExpand = (keys, info) => {
-        console.log("Trigger Expand", keys, info);
-    };
-
-    const onChange = (key) => {
-        console.log(key);
     };
 
     return (
@@ -106,99 +66,11 @@ const CodeSimulator = () => {
                             {task.description}
                         </p>
                     </div>
-                    <div>
-                        <h3 className="text-orange-500 font-mono font-semibold text-lg mt-10 text-center py-5">
-                            Структура папок
-                        </h3>
-                        <div className="mx-5">
-                            <DirectoryTree
-                                multiple
-                                defaultExpandAll
-                                onSelect={onSelect}
-                                onExpand={onExpand}
-                                treeData={treeData}
-                            />
-                        </div>
-                    </div>
                 </div>
 
-                <div className="md:w-3/6 w-full mt-10">
-                    <div className="flex justify-center flex-col items-center ml-0 lg:ml-10">
+                <div className="md:w-3/6 w-full mt-10 md:mt-2">
+                    <div className="flex justify-center flex-col items-center ml-0 lg:ml-2">
                         <EditorCode />
-                    </div>
-                    <div className="flex justify-center my-5">
-                        <button
-                            type="button"
-                            className="inline-flex mx-2 px-5 items-center bg-lime-500 rounded-md py-2 text-sm font-semibold text-slate-50 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-slate-800"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                className="w-6 h-6 mx-2"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
-                            Запустить
-                        </button>
-                        <button
-                            type="button"
-                            className="inline-flex px-5 mx-2 items-center rounded-md bg-orange-500 py-2 text-sm font-semibold text-slate-50 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-slate-800"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                className="w-6 h-6 mx-2"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M3 2.25a.75.75 0 01.75.75v.54l1.838-.46a9.75 9.75 0 016.725.738l.108.054a8.25 8.25 0 005.58.652l3.109-.732a.75.75 0 01.917.81 47.784 47.784 0 00.005 10.337.75.75 0 01-.574.812l-3.114.733a9.75 9.75 0 01-6.594-.77l-.108-.054a8.25 8.25 0 00-5.69-.625l-2.202.55V21a.75.75 0 01-1.5 0V3A.75.75 0 013 2.25z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
-                            Проверить
-                        </button>
-                    </div>
-                    <div className="py-5">
-                        <div className="border-y-2 border-slate-600 border-solid mt-2 flex justify-start items-center bg-[#282c35] mx-0 md:mx-4 w-full">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                className="w-6 h-6 text-slate-100"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
-
-                            <span className="px-5 font-bold py-2 bg-[#282c35] text-slate-100">
-                                Вывод:
-                            </span>
-                        </div>
-                        <div className="w-full h-[20vh] bg-[#282c35] text-slate-100 mx-0 md:mx-4 ">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={1.5}
-                                stroke="currentColor"
-                                className="w-6 h-6 text-slate-100"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                                />
-                            </svg>
-                        </div>
                     </div>
                 </div>
             </div>

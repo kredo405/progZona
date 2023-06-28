@@ -45,14 +45,11 @@ function App() {
                         path="/presonalAria/courseLanding"
                         element={<CourseLanding />}
                     />
+                    <Route path="/presonalAria/themes" element={<Themes />} />
                     <Route path="/presonalAria/course" element={<Course />}>
                         <Route
                             path="/presonalAria/course/lesson"
                             element={<Lesson />}
-                        />
-                        <Route
-                            path="/presonalAria/course/themes"
-                            element={<Themes />}
                         />
                         <Route
                             path="/presonalAria/course/discusions"

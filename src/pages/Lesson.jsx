@@ -7,162 +7,158 @@ const Lesson = () => {
             <div className="mt-10">
                 <div className="flex justify-center  py-5">
                     <h2 className="text-slate-100 text-4xl font-mono font-bold border-b-2 border-orange-600 py-3 px-5 border-solid">
-                        Урок
+                        Введение в JavaScript:
                     </h2>
                 </div>
                 <div className="flex flex-col">
-                    <div className="border-b-2 border-[#353943] border-solid py-3">
-                        <h3 className="text-slate-200 text-2xl text-center md:text-start font-bold px-5">
-                            Введение в HTML
-                        </h3>
-                    </div>
                     <div className="flex justify-center mt-5">
                         <h4 className="text-slate-200 text-xl font-semibold">
-                            Что такое HTML?
+                            Основы и ключевые концепции
                         </h4>
                     </div>
                     <div className="text-slate-300 px-2 md:px-32">
                         <p className="font-mono py-2">
-                            HTML (HyperText Markup Language) является основным
-                            языком разметки, используемым для создания
-                            веб-страниц. Этот язык позволяет определить
-                            структуру и содержимое веб-документа, обеспечивая
-                            его корректное отображение в веб-браузерах.
+                            JavaScript является одним из самых популярных языков
+                            программирования веб-разработки. Этот язык дает
+                            возможность создавать интерактивные и динамические
+                            веб-страницы, а также разрабатывать полноценные
+                            веб-приложения. В этой статье мы рассмотрим основы
+                            JavaScript, его историю и ключевые концепции, чтобы
+                            помочь вам начать свое путешествие в
+                            программирование на этом языке.
                         </p>
                         <div className="flex justify-center py-5">
                             <img
                                 className="w-6/12"
-                                src="https://acumbamail.com/blog/wp-content/uploads/2014/10/maquetacion-email-html.png"
-                                alt="html"
+                                src="https://cdn.geekboots.com/geek/javascript-meta-1652702081069.jpg"
+                                alt="js"
+                            />
+                        </div>
+                        <div className="flex justify-center mt-5">
+                            <h4 className="text-slate-200 text-xl font-semibold">
+                                История JavaScript
+                            </h4>
+                        </div>
+                        <p className="font-mono py-2">
+                            JavaScript был создан Бренданом Эйхом в 1995 году.
+                            Изначально он разрабатывался для использования
+                            веб-страницами, чтобы придать им динамичность и
+                            интерактивность. Вскоре после своего появления,
+                            JavaScript стал одним из основных инструментов
+                            веб-разработки.
+                        </p>
+                        <p className="font-mono py-2">
+                            Однако, стоит отметить, что JavaScript не имеет
+                            никакого отношения к языку программирования Java,
+                            несмотря на похожие названия. JavaScript был создан
+                            как независимый язык, и его развитие продолжается до
+                            сих пор.
+                        </p>
+                        <div className="flex justify-center mt-5">
+                            <h4 className="text-slate-200 text-xl font-semibold">
+                                Основы JavaScript
+                            </h4>
+                        </div>
+                        <p className="font-mono py-2">
+                            JavaScript является интерпретируемым языком, что
+                            означает, что код выполняется по мере его
+                            поступления в браузер. Это позволяет создавать
+                            интерактивные веб-страницы, которые реагируют на
+                            действия пользователя.
+                        </p>
+                        <p className="font-mono py-2">
+                            Прежде чем мы начнем писать код на JavaScript,
+                            давайте рассмотрим несколько основных концепций.
+                        </p>
+                        <div className="flex justify-center mt-5">
+                            <h4 className="text-slate-200 text-xl font-semibold">
+                                Переменные
+                            </h4>
+                        </div>
+                        <p className="font-mono py-2">
+                            Переменные в JavaScript используются для хранения
+                            значений. Для объявления переменной используется
+                            ключевое слово{" "}
+                            <span className="text-orange-500">var</span> ,
+                            <span className="text-orange-500">let</span> или{" "}
+                            <span className="text-orange-500">const</span> за
+                            которым следует имя переменной. Например:
+                        </p>
+
+                        <div className="px-2 lg:px-56">
+                            <CodeHighlight
+                                code={`var age = 25;
+let name = "John";
+const PI = 3.14;
+                                `}
                             />
                         </div>
                         <p className="font-mono py-2">
-                            HTML использует комбинацию тегов и текстового
-                            содержимого для определения элементов на
-                            веб-странице. Каждый тег обозначает определенный
-                            элемент и определяет его функциональность и внешний
-                            вид. Основная структура HTML-документа включает в
-                            себя следующие элементы:
+                            Здесь мы объявляем переменные age, name и PI и
+                            присваиваем им значения.
                         </p>
-                        <ul className="font-mono py-2 list-decimal px-7">
-                            <li>
-                                <span className="text-orange-500">
-                                    !DOCTYPE html
-                                </span>
-                                : Это объявление типа документа и указывает, что
-                                мы используем последнюю версию HTML.
-                            </li>
-                            <li>
-                                <span className="text-orange-500">
-                                    &lt;Html&gt;
-                                </span>
-                                : Элемент html является корневым элементом,
-                                который охватывает всю структуру веб-страницы.
-                            </li>
-                            <li>
-                                <span className="text-orange-500">
-                                    &lt;head&gt;
-                                </span>
-                                : Внутри элемента head содержится метаинформация
-                                о документе, такая как заголовок страницы,
-                                ссылки на стили CSS, скрипты JavaScript и другие
-                                метаинформационные элементы.
-                            </li>
-                            <li>
-                                <span className="text-orange-500">
-                                    &lt;body&gt;
-                                </span>
-                                : Элемент body содержит фактическое содержимое
-                                веб-страницы, такое как текст, изображения,
-                                ссылки и другие элементы.
-                            </li>
-                        </ul>
+                        <div className="flex justify-center mt-5">
+                            <h4 className="text-slate-200 text-xl font-semibold">
+                                Типы данных
+                            </h4>
+                        </div>
                         <p className="font-mono py-2">
-                            Пример кода базовой структуры HTML-документа
-                            выглядит следующим образом:
+                            JavaScript имеет несколько встроенных типов данных,
+                            включая числа, строки, логические значения и другие.
+                            Например:
                         </p>
                         <div className="px-2 lg:px-56">
                             <CodeHighlight
-                                code={`<!DOCTYPE html>
-<html>
-    <head>
-    <title>Заголовок страницы</title>
-    </head>
-    <body>
-        <h1>Привет, мир!</h1>
-        <p>Это пример веб-страницы, созданной с помощью HTML.</p>
-    </body>
-</html>`}
+                                code={`var age = 25;          // число
+let name = "John";     // строка
+const isStudent = true; // логическое значение (булево)
+                                `}
+                            />
+                        </div>
+                        <div className="flex justify-center mt-5">
+                            <h4 className="text-slate-200 text-xl font-semibold">
+                                Операторы
+                            </h4>
+                        </div>
+                        <p className="font-mono py-2">
+                            JavaScript поддерживает различные операторы для
+                            выполнения арифметических, сравнительных и
+                            логических операций. Например:
+                        </p>
+                        <div className="px-2 lg:px-56">
+                            <CodeHighlight
+                                code={`var x = 10 + 5; // сложение
+var y = 20 - 8; // вычитание
+var z = 4 * 6; // умножение
+var w = 10 / 2; // деление
+var isTrue = x > y; // сравнение (больше)
+var isFalse = x === y; // сравнение (равенство)`}
+                            />
+                        </div>
+                        <div className="flex justify-center mt-5">
+                            <h4 className="text-slate-200 text-xl font-semibold">
+                                Функции
+                            </h4>
+                        </div>
+                        <p className="font-mono py-2">
+                            Функции являются основными строительными блоками в
+                            JavaScript. Они позволяют определить блок кода,
+                            который можно вызывать многократно. Например:
+                        </p>
+                        <div className="px-2 lg:px-56">
+                            <CodeHighlight
+                                code={`function sayHello() {
+console.log("Привет!");
+}
+
+sayHello(); // вызов функции`}
                             />
                         </div>
                         <p className="font-mono py-2">
-                            В этом примере мы видим, что заголовок страницы
-                            задается с помощью элемента{" "}
-                            <span className="text-orange-500">
-                                &lt;title&gt;
-                            </span>
-                            , а основное содержимое размещается внутри элемента{" "}
-                            <span className="text-orange-500">
-                                &lt;body&gt;
-                            </span>
-                            . Здесь мы используем элементы{" "}
-                            <span className="text-orange-500">&lt;h1&gt;</span>{" "}
-                            и <span className="text-orange-500">&lt;p&gt;</span>
-                            для создания заголовка и параграфа соответственно.
+                            Вызов функции sayHello() выведет в консоль сообщение
+                            "Привет!".
                         </p>
-                        <p className="font-mono py-2">
-                            Основными элементами HTML являются теги, которые
-                            обрамляют содержимое и задают его тип и
-                            функциональность. Например, для создания ссылки мы
-                            используем тег{" "}
-                            <span className="text-orange-500">&lt;a&gt;</span>{" "}
-                            (anchor), для создания изображения - тег{" "}
-                            <span className="text-orange-500">&lt;img&gt;</span>{" "}
-                            (image), для создания списка - теги{" "}
-                            <span className="text-orange-500">&lt;ul&gt;</span>{" "}
-                            (unordered list) и{" "}
-                            <span className="text-orange-500">&lt;ol&gt;</span>{" "}
-                            (ordered list).
-                        </p>
-                        <p className="font-mono py-2">
-                            HTML предлагает богатый набор тегов для различных
-                            потребностей веб-разработки, позволяя создавать
-                            структуру страницы, форматировать текст и
-                            контролировать взаимодействие пользователей с
-                            веб-страницей. Кроме того, HTML позволяет встраивать
-                            мультимедийные элементы, создавать формы для сбора
-                            данных от пользователей и использовать семантические
-                            теги для более ясной структуры и доступности
-                            контента.
-                        </p>
-                        <p className="font-mono py-2">
-                            Важно понимать, что HTML является статическим языком
-                            разметки, то есть он определяет структуру и
-                            содержимое страницы, но не обеспечивает
-                            интерактивность и динамические функции. Для этого
-                            используются другие языки и технологии, такие как
-                            CSS для стилизации внешнего вида и JavaScript для
-                            добавления интерактивности.
-                        </p>
-                        <p className="font-mono py-2">
-                            HTML является фундаментальным языком для начала
-                            изучения веб-разработки. Понимание его основных
-                            принципов и элементов позволит вам создавать
-                            собственные веб-страницы и понимать структуру
-                            существующих сайтов.
-                        </p>
-                        <p className="font-mono py-2">
-                            В дальнейшем курсе мы углубимся в более продвинутые
-                            темы HTML, изучим различные теги и их атрибуты, а
-                            также научимся создавать более сложную и
-                            интерактивную веб-страницу.
-                        </p>
-                        <p className="font-mono py-2">
-                            Необходимо помнить, что HTML является постоянно
-                            развивающимся языком, и регулярное обновление знаний
-                            и ознакомление с последними стандартами являются
-                            важной частью работы веб-разработчика.
-                        </p>
+
                         <div className="flex justify-center py-10">
                             <Link
                                 to="/presonalAria/course/test"
