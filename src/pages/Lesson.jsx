@@ -6,7 +6,7 @@ const Lesson = () => {
         <>
             <div className="mt-10">
                 <div className="flex justify-center  py-5">
-                    <h2 className="text-slate-100 text-4xl font-mono font-bold border-b-2 border-orange-600 py-3 px-5 border-solid">
+                    <h2 className="text-slate-100 text-4xl text-center font-mono font-bold border-b-2 border-orange-600 py-3 px-5 border-solid">
                         Введение в JavaScript:
                     </h2>
                 </div>
