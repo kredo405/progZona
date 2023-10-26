@@ -5,19 +5,11 @@ import EditorCode from "../components/PersonalArea/EditorCode";
 const CodeSimulator = () => {
     const state = useSelector((state) => state);
     const [content, setContent] = useState("");
-    const task = {
-        task: "Напишите программу, которая приветствует пользователя",
-        description:
-            "Вам необходимо создать программу, которая приветствует пользователя в зависимости от его возраста. Если пользователь младше 18 лет, программа должна выводить сообщение 'Привет, ребенок!', а если пользователь 18 лет или старше, то сообщение должно быть 'Привет, взрослый!'.",
-        complexity: "Легко",
-    };
 
     return (
         <>
-            <div
-                className={`flex flex-col md:flex-row  justify-between  px-2 lg:px-10 mt-10 h-screen`}
-            >
-                <div className="w-full md:w-3/6 flex flex-col border-r-2 border-none border-zinc-900 dark:border-slate-700 lg:border-solid">
+            <div className="flex px-2 z-0 mt-10">
+                {/* <div className="w-full md:w-3/6 flex flex-col border-r-2 border-none border-zinc-900 dark:border-slate-700 lg:border-solid">
                     <div className="flex justify-center">
                         <h1 className="font-serif text-center text-slate-100 text-2xl font-bold">
                             {task.task}
@@ -66,10 +58,10 @@ const CodeSimulator = () => {
                             {task.description}
                         </p>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="md:w-3/6 w-full mt-10 md:mt-2">
-                    <div className="flex justify-center flex-col items-center ml-0 lg:ml-2">
+                <div className="w-full mt-5 md:mt-2">
+                    <div className="flex justify-center flex-col items-center">
                         <EditorCode />
                     </div>
                 </div>

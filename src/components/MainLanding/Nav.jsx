@@ -16,13 +16,18 @@ export const Nav = ({ current }) => {
             current: current === "/" ? true : false,
         },
         {
-            name: "Наши курсы",
+            name: "Обучение",
             href: "/courses",
             current: current === "courses" ? true : false,
         },
         {
             name: "Контакты",
             href: "/contacts",
+            current: current === "contacts" ? true : false,
+        },
+        {
+            name: "Пример",
+            href: "/example",
             current: current === "contacts" ? true : false,
         },
     ];

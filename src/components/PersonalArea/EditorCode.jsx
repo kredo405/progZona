@@ -63,7 +63,7 @@ const EditorCode = () => {
 
     return (
         <div className="flex flex-col md:flex-row w-full">
-            <div className="w-full md:w-4/12">
+            <div className="w-full md:w-3/12">
                 <DirectoryTree
                     multiple
                     defaultExpandAll
@@ -73,7 +73,7 @@ const EditorCode = () => {
                     className="bg-[#1f1f1f] font-mono font-bold text-slate-200 text-sm h-full"
                 />
             </div>
-            <div className="w-full md:w-8/12">
+            <div className="w-full md:w-9/12">
                 <div className="flex justify-between bg-[#1a1d25] w-full">
                     <button className="text-slate-50 border-r-2 border-solid border-slate-800 px-4 py-3">
                         {files.name}
@@ -86,10 +86,10 @@ const EditorCode = () => {
                                 whiteSpace: "nowrap",
                             }}
                         >
-                            <Tooltip placement="bottom" title="Запустить">
+                            <Tooltip placement="bottom" title="Проверить">
                                 <button
                                     type="button"
-                                    className="inline-flex mx-2 px-2 items-center bg-transparent rounded-md py-2 text-sm font-semibold text-lime-500 hover:text-lime-700"
+                                    className="inline-flex px-2 items-center bg-transparent rounded-md py-2 text-sm font-semibold text-lime-500 hover:text-lime-700"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -105,22 +105,18 @@ const EditorCode = () => {
                                     </svg>
                                 </button>
                             </Tooltip>
-                            <Tooltip placement="bottom" title="Проверить">
+                            <Tooltip placement="bottom" title="Задание">
                                 <button
                                     type="button"
-                                    className="inline-flex px-2 items-center rounded-md bg-transparent py-2 text-sm font-semibold text-orange-500 hover:text-orange-700"
+                                    className="inline-flex mr-5 px-2 items-center rounded-md bg-transparent py-2 text-sm font-semibold text-sky-500 hover:text-sky-700"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
-                                        className="w-6 h-6 mx-2"
+                                        class="w-6 h-6"
                                     >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M3 2.25a.75.75 0 01.75.75v.54l1.838-.46a9.75 9.75 0 016.725.738l.108.054a8.25 8.25 0 005.58.652l3.109-.732a.75.75 0 01.917.81 47.784 47.784 0 00.005 10.337.75.75 0 01-.574.812l-3.114.733a9.75 9.75 0 01-6.594-.77l-.108-.054a8.25 8.25 0 00-5.69-.625l-2.202.55V21a.75.75 0 01-1.5 0V3A.75.75 0 013 2.25z"
-                                            clipRule="evenodd"
-                                        />
+                                        <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
                                     </svg>
                                 </button>
                             </Tooltip>
@@ -128,7 +124,7 @@ const EditorCode = () => {
                     </div>
                 </div>
                 <Editor
-                    height="49vh"
+                    height="50vh"
                     theme="vs-dark"
                     path={files.name}
                     defaultLanguage={files.language}

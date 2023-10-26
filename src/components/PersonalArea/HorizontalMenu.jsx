@@ -14,8 +14,8 @@ const HorizontalMenu = () => {
     const dispatch = useDispatch();
 
     return (
-        <div className="flex justify-between bg-[#1f222b] w-full  fixed">
-            <div className="text-slate-100 w-2/12  md:w-6/12 flex justify-start items-center px-5">
+        <div className="flex justify-between bg-[#1f222b] w-full fixed">
+            <div className="text-slate-100 w-2/12 md:w-6/12 flex justify-start items-center px-5">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

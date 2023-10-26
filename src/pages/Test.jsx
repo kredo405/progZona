@@ -83,7 +83,7 @@ const Test = () => {
                 error();
             }
         } else {
-            navigate("/presonalAria/course/codeSimulator");
+            navigate("/presonalAria/task");
         }
     };
 

@@ -17,6 +17,8 @@ import Themes from "./pages/Themes";
 import Discusions from "./pages/Discusions";
 import Test from "./pages/Test";
 import CodeSimulator from "./pages/CodeSimulator";
+import Task from "./pages/Task";
+import ExamplePage from "./pages/examplePage";
 
 function App() {
     return (
@@ -26,6 +28,7 @@ function App() {
                 <Route path="/courses" element={<MainCourses />} />
                 <Route path="/course" element={<MainCourse />} />
                 <Route path="/contacts" element={<Contacts />} />
+                <Route path="/example" element={<ExamplePage />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/presonalAria" element={<PersonalArea />}>
@@ -46,6 +49,11 @@ function App() {
                         element={<CourseLanding />}
                     />
                     <Route path="/presonalAria/themes" element={<Themes />} />
+                    <Route path="/presonalAria/task" element={<Task />} />
+                    <Route
+                        path="/presonalAria/codeSimulator"
+                        element={<CodeSimulator />}
+                    />
                     <Route path="/presonalAria/course" element={<Course />}>
                         <Route
                             path="/presonalAria/course/lesson"
@@ -58,10 +66,6 @@ function App() {
                         <Route
                             path="/presonalAria/course/test"
                             element={<Test />}
-                        />
-                        <Route
-                            path="/presonalAria/course/codeSimulator"
-                            element={<CodeSimulator />}
                         />
                     </Route>
                 </Route>

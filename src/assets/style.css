@@ -1,0 +1,16 @@
+.object {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.empty {
+    font-size: 16px;
+    color: red;
+    margin-top: 10px;
+}
