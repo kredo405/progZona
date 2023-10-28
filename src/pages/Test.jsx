@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { message } from "antd";
-import { useNavigate } from "react-router-dom";
+import TestResult from "../components/PersonalArea/TestResult";
 
 const tests = [
     {
@@ -62,15 +62,13 @@ const tests = [
     },
 ];
 
-const Test = () => {
+const Test = ({ setFinishTest }) => {
     const [questionNumber, setQuestionNumber] = useState(0);
     const [userResponse, setUserResponse] = useState(
         tests[questionNumber].answer[0].name
     );
     const [selectedPayment, setSelectedPayment] = useState(0);
     const [messageApi, contextHolder] = message.useMessage();
-
-    const navigate = useNavigate();
 
     const questionCheck = () => {
         if (tests.length - 1 > questionNumber) {
@@ -83,7 +81,7 @@ const Test = () => {
                 error();
             }
         } else {
-            navigate("/presonalAria/task");
+            setFinishTest(true);
         }
     };
 
@@ -108,6 +106,9 @@ const Test = () => {
     return (
         <>
             <div>
+                <h2 className="text-slate-100 font-bold text-2xl text-center py-5">
+                    Тест
+                </h2>
                 {contextHolder}
                 <div className="flex justify-center  py-5">
                     <h2 className="text-slate-100 text-xl font-mono font-bold border-b-2 border-orange-600 py-3 px-5 border-solid">
@@ -165,7 +166,7 @@ const Test = () => {
                 <div className="flex justify-center py-10">
                     <button
                         onClick={questionCheck}
-                        className="px-20 py-4 bg-orange-500 hover:bg-orange-600 text-slate-100 font-mono font-semibold rounded-xl"
+                        className="px-20 py-4 bg-sky-500 hover:bg-sky-600 text-slate-100 font-mono font-semibold rounded-xl"
                     >
                         Далее
                     </button>
