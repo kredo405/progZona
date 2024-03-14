@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
@@ -23,11 +22,6 @@ export const Nav = ({ current }) => {
         {
             name: "Контакты",
             href: "/contacts",
-            current: current === "contacts" ? true : false,
-        },
-        {
-            name: "Пример",
-            href: "/example",
             current: current === "contacts" ? true : false,
         },
     ];

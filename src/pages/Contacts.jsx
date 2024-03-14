@@ -1,6 +1,4 @@
 import { Nav } from "../components/MainLanding/Nav";
-import contacts from "../assets/contacts.png";
-import contacts1 from "../assets/contacts1.png";
 
 const Contacts = () => {
     return (
@@ -16,9 +14,6 @@ const Contacts = () => {
                 </p>
             </div>
             <div className="flex justify-center px-2 py-10">
-                {/* <div className="hidden md:flex justify-end items-start w-2/12">
-                    <img src={contacts1} alt="Контакты" />
-                </div> */}
                 <div className=" px-6 lg:px-8 w-full md:w-8/12">
                     <form className="mx-auto max-w-xl sm:mt-10">
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -101,9 +96,6 @@ const Contacts = () => {
                         </div>
                     </form>
                 </div>
-                {/* <div className="hidden  md:flex justify-center items-end w-2/12">
-                    <img src={contacts} alt="Контакты" />
-                </div> */}
             </div>
         </>
     );

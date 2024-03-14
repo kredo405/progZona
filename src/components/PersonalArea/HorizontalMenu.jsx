@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { setShow } from "../../store/slices/verticalMenuSlice";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import logo from "../../assets/logo.png";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -32,7 +33,13 @@ const HorizontalMenu = () => {
                     />
                 </svg>
             </div>
-            <div className="h-16 w-10/12 md:w-6/12 flex justify-end items-center">
+
+            <div className="h-16 w-2/12 flex justify-center items-center">
+                <Link to="/" className="flex justify-center items-center">
+                    <img className="w-full md:w-6/12" src={logo} alt="logo" />
+                </Link>
+            </div>
+            <div className="h-16 w-10/12 md:w-6/12 flex justify-end items-center pr-5 md:pr-2">
                 <div className=" flex justify-end items-center h-full">
                     <div className="flex justify-end items-center px-2 h-full">
                         <Link
@@ -68,7 +75,7 @@ const HorizontalMenu = () => {
                             </svg>
                         </Link>
                     </div>
-                    <div className="flex justify-end w-full h-full items-center px-5 ">
+                    <div className="flex justify-end w-full h-full items-center md:px-5 ">
                         <Menu as="div" className="relative ml-3">
                             <div className="flex items-center">
                                 <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">

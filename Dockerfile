@@ -1,14 +1,25 @@
-# It uses node:18-alpine as the base image for the frontend React.js application
-FROM node:18-alpine
-# Creating the working directory named `app`
+# Используем официальный образ Node.js
+FROM node:14
+
+# Устанавливаем рабочую директорию в контейнере
 WORKDIR /app
-# Copying all the tools and dependencies in the package.json file to the working directory `app`
-COPY package.json .
-#Installing all the tools and dependencies in the container
+
+# Копируем файлы package.json и package-lock.json
+COPY package*.json ./
+
+# Устанавливаем зависимости
 RUN npm install
-#Copying all the application source code and files to the working directory `app`
+
+# Копируем остальные файлы проекта
 COPY . .
-#Exposing the container to run on this port 3000
+
+# Собираем приложение
+RUN npm run build
+
+# Устанавливаем глобально сервер для статической раздачи
+RUN npm install -g serve
+
+# Запускаем приложение
+CMD ["serve", "-s", "build", "-l", "3000"]
+
 EXPOSE 3000
-#Command to start the Docker container for the frontend React.js application
-CMD ["npm", "start"]

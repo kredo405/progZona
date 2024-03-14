@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { message } from "antd";
-import TestResult from "../components/PersonalArea/TestResult";
 
 const tests = [
     {

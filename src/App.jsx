@@ -18,7 +18,6 @@ import Discusions from "./pages/Discusions";
 import Test from "./pages/Test";
 import CodeSimulator from "./pages/CodeSimulator";
 import Task from "./pages/Task";
-import ExamplePage from "./pages/examplePage";
 
 function App() {
     return (
@@ -28,7 +27,6 @@ function App() {
                 <Route path="/courses" element={<MainCourses />} />
                 <Route path="/course" element={<MainCourse />} />
                 <Route path="/contacts" element={<Contacts />} />
-                <Route path="/example" element={<ExamplePage />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/presonalAria" element={<PersonalArea />}>
