@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 const CourseCard = ({img, title, desc, level, access}) => {
     return (
-        <article className="max-w-sm mx-3 mt-10 md:mt-4 shadow-lg rounded-md duration-300 hover:bg-[#33394c] bg-[#292c35]">
+        <article className="max-w-sm mx-3 mt-16 md:mt-4 shadow-lg rounded-md duration-300 hover:bg-[#33394c] bg-[#292c35]">
             <Link to="/presonalAria/themes">
                 <img
                     src={img}

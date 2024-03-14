@@ -1,6 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { lineNumbers } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CodeHighlight = ({ code }) => {
     // const formattedCode = `\t\t${code.replace(/\n/g, "\n\t\t")}`;
