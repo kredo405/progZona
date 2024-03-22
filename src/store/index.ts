@@ -4,8 +4,10 @@ import verticalMenuSlice from "./slices/verticalMenuSlice";
 
 export const store = configureStore({
     reducer: {
-        mainCourseSlice,
-        verticalMenuSlice,
+        mainCourse: mainCourseSlice,
+        verticalMenu: verticalMenuSlice,
     },
     devTools: true,
 });
+
+export type RootState = ReturnType<typeof store.getState>;

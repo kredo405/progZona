@@ -1,4 +1,4 @@
-import { ActivityCalendar } from "activity-calendar-react";
+
 
 const Statistic = () => {
     const stats = [
@@ -17,49 +17,6 @@ const Statistic = () => {
         {
             data: "0",
             title: "баллов",
-        },
-    ];
-
-    const colorCustomization = {
-        activity0: "#dadada",
-        activity1: "#0e4429",
-        activity2: "#006d32",
-        activity3: "#26a641",
-        activity4: "#39d353",
-    };
-
-    const sampleData = [
-        {
-            day: "2023-06-20",
-            activity: 5,
-        },
-        {
-            day: "2023-06-19",
-            activity: 1,
-        },
-        {
-            day: "2023-06-18",
-            activity: 2,
-        },
-        {
-            day: "2023-06-17",
-            activity: 3,
-        },
-        {
-            day: "2023-06-16",
-            activity: 2,
-        },
-        {
-            day: "2023-06-15",
-            activity: 4,
-        },
-        {
-            day: "2023-06-14",
-            activity: 3,
-        },
-        {
-            day: "2023-06-13",
-            activity: 5,
         },
     ];
 
@@ -86,11 +43,6 @@ const Statistic = () => {
                     </ul>
                 </div>
                 <div className="text-slate-100 md:flex justify-center w-full mt-10 hidden">
-                    <ActivityCalendar
-                        sampleData={sampleData}
-                        colorCustomization={colorCustomization}
-                        showMonth={true}
-                    />
                 </div>
             </section>
         </>

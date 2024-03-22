@@ -1,5 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { message } from "antd";
+
+interface TestProps {
+    setFinishTest?: (value: boolean) => void;
+}
 
 const tests = [
     {
@@ -61,12 +65,13 @@ const tests = [
     },
 ];
 
-const Test = ({ setFinishTest }) => {
+
+const Test: React.FC<TestProps>  = ({ setFinishTest }) => {
     const [questionNumber, setQuestionNumber] = useState(0);
-    const [userResponse, setUserResponse] = useState(
+    const [userResponse, setUserResponse] = useState<string>(
         tests[questionNumber].answer[0].name
     );
-    const [selectedPayment, setSelectedPayment] = useState(0);
+    const [selectedPayment, setSelectedPayment] = useState<number>(0);
     const [messageApi, contextHolder] = message.useMessage();
 
     const questionCheck = () => {
@@ -80,7 +85,9 @@ const Test = ({ setFinishTest }) => {
                 error();
             }
         } else {
-            setFinishTest(true);
+            if (setFinishTest) {
+                setFinishTest(true);
+            }
         }
     };
 
@@ -98,7 +105,7 @@ const Test = ({ setFinishTest }) => {
         });
     };
 
-    const handlePaymentChange = (e) => {
+    const handlePaymentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedPayment(Number(e.target.value));
     };
 

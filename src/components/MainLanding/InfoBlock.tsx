@@ -1,4 +1,12 @@
-export const InfoBlock = ({
+interface InfoBlockProps {
+    title: string;
+    paragraphFirst: string;
+    paragraphSecond: string;
+    isRight: boolean;
+    image: string;
+}
+
+export const InfoBlock: React.FC<InfoBlockProps> = ({
     title,
     paragraphFirst,
     paragraphSecond,

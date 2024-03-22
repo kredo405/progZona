@@ -3,26 +3,30 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
-function classNames(...classes) {
+interface NavProps {
+    current: string;
+}
+
+function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(" ");
 }
 
-export const Nav = ({ current }) => {
+export const Nav: React.FC<NavProps> = ({ current }) => {
     const navigation = [
         {
             name: "Главная",
             href: "/",
-            current: current === "/" ? true : false,
+            current: current === "/",
         },
         {
             name: "Обучение",
             href: "/courses",
-            current: current === "courses" ? true : false,
+            current: current === "courses",
         },
         {
             name: "Контакты",
             href: "/contacts",
-            current: current === "contacts" ? true : false,
+            current: current === "contacts",
         },
     ];
 
@@ -30,7 +34,7 @@ export const Nav = ({ current }) => {
         <Disclosure as="nav">
             {({ open }) => (
                 <>
-                    <div className=" max-w-7xl md:max-w-full px-2 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl md:max-w-full px-2 sm:px-6 lg:px-8">
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
@@ -117,7 +121,7 @@ export const Nav = ({ current }) => {
                                         item.current
                                             ? "bg-gray-900 text-white"
                                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                        "block rounded-md px-3 py-2 text-base font-medium  font-mono"
+                                        "block rounded-md px-3 py-2 text-base font-medium font-mono"
                                     )}
                                     aria-current={
                                         item.current ? "page" : undefined

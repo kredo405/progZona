@@ -59,7 +59,7 @@ const Course = () => {
                             <li
                                 key={idx}
                                 className={`py-2 border-b-2 ${
-                                    selectedItem == idx
+                                    selectedItem === idx
                                         ? "border-orange-600 text-slate-100"
                                         : "border-slate-600 text-slate-200"
                                 }`}
@@ -68,7 +68,7 @@ const Course = () => {
                                     role="tab"
                                     to={item.link}
                                     aria-selected={
-                                        selectedItem == idx ? true : false
+                                        selectedItem === idx
                                     }
                                     aria-controls={`tabpanel-${idx + 1}`}
                                     className="flex items-center gap-x-2 py-2 px-2 rounded-lg duration-150 hover:text-slate-100 hover:bg-gray-700 active:bg-gray-600 font-medium"

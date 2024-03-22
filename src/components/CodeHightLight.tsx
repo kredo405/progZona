@@ -1,9 +1,12 @@
+import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const CodeHighlight = ({ code }) => {
-    // const formattedCode = `\t\t${code.replace(/\n/g, "\n\t\t")}`;
+interface CodeHighlightProps {
+    code: string;
+}
 
+const CodeHighlight: React.FC<CodeHighlightProps> = ({ code }) => {
     return (
         <div className=" ">
             <SyntaxHighlighter

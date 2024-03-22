@@ -1,9 +1,6 @@
 import Editor from "@monaco-editor/react";
 import { useState } from "react";
-import { Tree } from "antd";
 import { Tooltip } from "antd";
-
-const { DirectoryTree } = Tree;
 
 const EditorCode = () => {
     const [files, setFiles] = useState({
@@ -12,66 +9,11 @@ const EditorCode = () => {
         value: "",
     });
 
-    const treeData = [
-        {
-            title: "js-01",
-            key: "0-0",
-            children: [
-                {
-                    title: "index.html",
-                    key: "0-0-1",
-                    isLeaf: true,
-                    language: "html",
-                    content: `<!DOCTYPE html>
-<html>
-<head>
-  <title>Приветствие</title>
-  <script src="script.js"></script>
-</head>
-<body>
-  <h1>Приветствие</h1>
-</body>
-</html>
-                    `,
-                },
-                {
-                    title: "script.js",
-                    key: "0-0-2",
-                    isLeaf: true,
-                    language: "javascript",
-                    content: `// Решение пишите здесь
-                    
-                    `,
-                },
-            ],
-        },
-    ];
-
-    const onSelect = (keys, info) => {
-        console.log("Trigger Select", keys, info);
-        if (info.selectedNodes[0].isLeaf) {
-            setFiles({
-                name: info.selectedNodes[0].title,
-                language: info.selectedNodes[0].language,
-                value: info.selectedNodes[0].content,
-            });
-        }
-    };
-    const onExpand = (keys, info) => {
-        console.log("Trigger Expand", keys, info);
-    };
 
     return (
         <div className="flex flex-col md:flex-row w-full">
             <div className="w-full md:w-3/12">
-                <DirectoryTree
-                    multiple
-                    defaultExpandAll
-                    onSelect={onSelect}
-                    onExpand={onExpand}
-                    treeData={treeData}
-                    className="bg-[#1f1f1f] font-mono font-bold text-slate-200 text-sm h-full"
-                />
+
             </div>
             <div className="w-full md:w-9/12">
                 <div className="flex justify-between bg-[#1a1d25] w-full">
@@ -114,7 +56,7 @@ const EditorCode = () => {
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
-                                        class="w-6 h-6"
+                                        className="w-6 h-6"
                                     >
                                         <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
                                     </svg>

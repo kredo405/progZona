@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import VertivalMenu from "../components/PersonalArea/VerticalMenu";
+import VerticalMenu from "../components/PersonalArea/VerticalMenu";
 import HorizontalMenu from "../components/PersonalArea/HorizontalMenu";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -11,7 +11,7 @@ const PersonalArea = () => {
 
     return (
         <div className="flex flex-col">
-            <VertivalMenu />
+            <VerticalMenu />
             <div className="relative z-0">
                 <HorizontalMenu />
             </div>

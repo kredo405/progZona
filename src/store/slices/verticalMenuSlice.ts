@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+export interface VerticalMenuState {
+    show: boolean;
+}
 
-const initialState = {
+const initialState: VerticalMenuState = {
     show: false,
 };
 
