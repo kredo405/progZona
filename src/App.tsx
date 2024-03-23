@@ -33,20 +33,7 @@ function App() {
                         element={<Statistic />}
                     />
                     <Route path="/presonalAria/themes" element={<Themes />} />
-                    <Route path="/presonalAria/course" element={<Course />}>
-                        <Route
-                            path="/presonalAria/course/lesson"
-                            element={<Lesson />}
-                        />
-                        <Route
-                            path="/presonalAria/course/discusions"
-                            element={<Discusions />}
-                        />
-                        <Route
-                            path="/presonalAria/course/test"
-                            element={<Test  />}
-                        />
-                    </Route>
+                    <Route path="/presonalAria/lesson" element={<Lesson />} />
                 </Route>
             </Routes>
         </div>

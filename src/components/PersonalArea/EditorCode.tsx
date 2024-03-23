@@ -2,18 +2,45 @@ import Editor from "@monaco-editor/react";
 import { useState } from "react";
 import { Tooltip } from "antd";
 
-const EditorCode = () => {
+type EditorCodeProps = {
+    task: string;
+    description: string;
+};
+
+const EditorCode = (task: EditorCodeProps) => {
     const [files, setFiles] = useState({
-        name: "",
-        language: "",
-        value: "",
+        name: "index.cs",
+        language: "csharp",
+        value: `using System;
+
+        class Program
+        {
+            static void Main()
+            {
+                Console.Write("Введите ваш возраст: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+        
+                if (age < 18)
+                {
+                    Console.WriteLine("Привет, ребенок!");
+                }
+                else
+                {
+                    Console.WriteLine("Привет, взрослый!");
+                }
+            }
+        }`,
     });
 
-
     return (
-        <div className="flex flex-col md:flex-row w-full">
+        <div className="flex flex-col md:flex-row w-full bg-[#212122]">
             <div className="w-full md:w-3/12">
-
+                <h2 className="text-orange-500 font-mono font-bold text-center text-md px-5 mt-10">
+                    {task.task}
+                </h2>
+                <div className="text-slate-300 font-mono text-sm px-5 mt-5">
+                    {task.description}
+                </div>
             </div>
             <div className="w-full md:w-9/12">
                 <div className="flex justify-between bg-[#1a1d25] w-full">
@@ -47,7 +74,7 @@ const EditorCode = () => {
                                     </svg>
                                 </button>
                             </Tooltip>
-                            <Tooltip placement="bottom" title="Задание">
+                            <Tooltip placement="bottom" title="Помощь ИИ">
                                 <button
                                     type="button"
                                     className="inline-flex mr-5 px-2 items-center rounded-md bg-transparent py-2 text-sm font-semibold text-sky-500 hover:text-sky-700"
@@ -58,20 +85,26 @@ const EditorCode = () => {
                                         fill="currentColor"
                                         className="w-6 h-6"
                                     >
-                                        <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M19.449 8.448 16.388 11a4.52 4.52 0 0 1 0 2.002l3.061 2.55a8.275 8.275 0 0 0 0-7.103ZM15.552 19.45 13 16.388a4.52 4.52 0 0 1-2.002 0l-2.55 3.061a8.275 8.275 0 0 0 7.103 0ZM4.55 15.552 7.612 13a4.52 4.52 0 0 1 0-2.002L4.551 8.45a8.275 8.275 0 0 0 0 7.103ZM8.448 4.55 11 7.612a4.52 4.52 0 0 1 2.002 0l2.55-3.061a8.275 8.275 0 0 0-7.103 0Zm8.657-.86a9.776 9.776 0 0 1 1.79 1.415 9.776 9.776 0 0 1 1.414 1.788 9.764 9.764 0 0 1 0 10.211 9.777 9.777 0 0 1-1.415 1.79 9.777 9.777 0 0 1-1.788 1.414 9.764 9.764 0 0 1-10.212 0 9.776 9.776 0 0 1-1.788-1.415 9.776 9.776 0 0 1-1.415-1.788 9.764 9.764 0 0 1 0-10.212 9.774 9.774 0 0 1 1.415-1.788A9.774 9.774 0 0 1 6.894 3.69a9.764 9.764 0 0 1 10.211 0ZM14.121 9.88a2.985 2.985 0 0 0-1.11-.704 3.015 3.015 0 0 0-2.022 0 2.985 2.985 0 0 0-1.11.704c-.326.325-.56.705-.704 1.11a3.015 3.015 0 0 0 0 2.022c.144.405.378.785.704 1.11.325.326.705.56 1.11.704.652.233 1.37.233 2.022 0a2.985 2.985 0 0 0 1.11-.704c.326-.325.56-.705.704-1.11a3.016 3.016 0 0 0 0-2.022 2.985 2.985 0 0 0-.704-1.11Z"
+                                            clip-rule="evenodd"
+                                        />
                                     </svg>
                                 </button>
                             </Tooltip>
                         </div>
                     </div>
                 </div>
-                <Editor
-                    height="50vh"
-                    theme="vs-dark"
-                    path={files.name}
-                    defaultLanguage={files.language}
-                    defaultValue={files.value}
-                />
+                <div className="z-0">
+                    <Editor
+                        height="50vh"
+                        theme="vs-dark"
+                        path={files.name}
+                        defaultLanguage={files.language}
+                        defaultValue={files.value}
+                    />
+                </div>
                 <div className="w-full">
                     <div className="border-y-2 px-3 border-[#2d2d2d] border-solid flex justify-start items-center bg-[#202020] mx-0  w-full">
                         <svg

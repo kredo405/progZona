@@ -48,9 +48,9 @@ const Course = () => {
     const [selectedItem, setSelectedItem] = useState(0);
 
     return (
-        <div className="flex mt-10">
+        <div className="flex mt-6">
             <div className="flex flex-col w-full">
-                <div className="px-4 md:px-8">
+                <div className=" fixed bg-slate-600 w-full">
                     <ul
                         role="tablist"
                         className="max-w-screen-xl mx-auto border-b border-slate-800 flex items-center gap-x-6 overflow-x-auto text-sm"
@@ -67,9 +67,7 @@ const Course = () => {
                                 <Link
                                     role="tab"
                                     to={item.link}
-                                    aria-selected={
-                                        selectedItem === idx
-                                    }
+                                    aria-selected={selectedItem === idx}
                                     aria-controls={`tabpanel-${idx + 1}`}
                                     className="flex items-center gap-x-2 py-2 px-2 rounded-lg duration-150 hover:text-slate-100 hover:bg-gray-700 active:bg-gray-600 font-medium"
                                     onClick={() => setSelectedItem(idx)}

@@ -3,15 +3,23 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setShow } from "../../store/slices/verticalMenuSlice";
-import { VerticalMenuState } from "../../store/slices/verticalMenuSlice";
 import { RootState } from "../../store";
 import logo from "../../assets/logo.png";
 import logoMin from "../../assets/logoMin.png";
 
 const VerticalMenu = () => {
-    const state = useSelector((state : RootState) => state.verticalMenu);
+    const [isHovered, setIsHovered] = useState(false);
+    const state = useSelector((state: RootState) => state.verticalMenu);
     const dispatch = useDispatch();
-    console.log(state);
+
+    const handleMouseEnter = () => {
+        dispatch(setShow(true));
+    };
+
+    const handleClick = () => {
+        dispatch(setShow(!state.show));
+    };
+
     const navigation = [
         {
             href: "/presonalAria/myEducation",
@@ -31,15 +39,61 @@ const VerticalMenu = () => {
         },
         {
             href: "/presonalAria/statistic",
-            name: "Прогресс",
+            name: "Задачи",
             icon: (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
+                    stroke-width="1.5"
+                    stroke="currentColor"
                     className="w-6 h-6"
                 >
-                    <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z" />
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122"
+                    />
+                </svg>
+            ),
+        },
+        {
+            href: "/presonalAria/statistic",
+            name: "Помощь сообщества",
+            icon: (
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+                    />
+                </svg>
+            ),
+        },
+        {
+            href: "/presonalAria/statistic",
+            name: "Статьи",
+            icon: (
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+                    />
                 </svg>
             ),
         },
@@ -48,22 +102,19 @@ const VerticalMenu = () => {
     return (
         <>
             {state.show ? (
-                <div className="z-10">
+                <div className="z-20 ">
                     <nav className="fixed top-0 left-0 w-56 h-full border-r border-slate-900 bg-[#1f222b] space-y-8 sm:w-64">
-                        <div className="flex flex-col h-full">
+                        <div
+                            onClick={handleClick}
+                            className="flex flex-col h-full"
+                        >
                             <div className="text-slate-100 w-full flex justify-center mt-5 cursor-pointer">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                     className="w-6 h-6 text-slate-100 cursor-pointer"
-                                    onClick={() =>
-                                        dispatch(
-                                            setShow(
-                                                !state.show
-                                            )
-                                        )
-                                    }
+                                    onClick={handleClick}
                                 >
                                     <path
                                         fillRule="evenodd"
@@ -78,27 +129,19 @@ const VerticalMenu = () => {
                                         src={logo}
                                         width={140}
                                         className="mx-auto"
-                                     alt="logo" />
+                                        alt="logo"
+                                    />
                                 </Link>
                             </div>
                             <div className="flex-1 flex flex-col h-full overflow-auto">
                                 <ul className="px-4 text-sm font-medium flex-1">
                                     {navigation.map((item, idx) => (
-                                        <li
-                                            key={idx}
-                                            onClick={() =>
-                                                dispatch(
-                                                    setShow(
-                                                        !state.show
-                                                    )
-                                                )
-                                            }
-                                        >
+                                        <li key={idx} onClick={handleClick}>
                                             <Link
                                                 to={item.href}
                                                 className="flex items-center gap-x-2 text-slate-100 p-2 rounded-lg text-xl font-mono hover:bg-slate-800 active:bg-gray-100 duration-150"
                                             >
-                                                <div className="text-slate-100">
+                                                <div className="text-slate-100 px-2">
                                                     {item.icon}
                                                 </div>
                                                 {item.name}
@@ -113,22 +156,20 @@ const VerticalMenu = () => {
             ) : null}
 
             {state.show ? null : (
-                <div className="z-10 hidden md:block">
+                <div className="z-20 hidden md:block ">
                     <nav className="fixed top-0 left-0 w-20 h-full border-r border-slate-900 bg-[#1f222b] space-y-8">
-                        <div className="flex flex-col h-full">
+                        <div
+                            // onMouseEnter={handleMouseEnter}
+                            // onClick={handleClick}
+                            className="flex flex-col h-full "
+                        >
                             <div className="text-slate-100 w-full flex justify-center mt-5">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
                                     className="w-6 h-6 text-slate-100 cursor-pointer"
-                                    onClick={() =>
-                                        dispatch(
-                                            setShow(
-                                                !state.show
-                                            )
-                                        )
-                                    }
+                                    onClick={handleClick}
                                 >
                                     <path
                                         fillRule="evenodd"
@@ -143,6 +184,7 @@ const VerticalMenu = () => {
                                         src={logoMin}
                                         width={35}
                                         className="mx-auto"
+                                        alt="logo"
                                     />
                                 </Link>
                             </div>

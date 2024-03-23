@@ -12,7 +12,7 @@ const PersonalArea = () => {
     return (
         <div className="flex flex-col">
             <VerticalMenu />
-            <div className="relative z-0">
+            <div className="relative z-10">
                 <HorizontalMenu />
             </div>
             <div

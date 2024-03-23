@@ -100,7 +100,7 @@ const Themes = () => {
                     {el.subtopics.map((item, i) => {
                         return (
                             <li className="text-slate-300 font-mono text-lg hover:text-orange-500">
-                                <Link to="/presonalAria/course/lesson">
+                                <Link to="/presonalAria/lesson">
                                     {i + 1} {item}
                                 </Link>
                             </li>
