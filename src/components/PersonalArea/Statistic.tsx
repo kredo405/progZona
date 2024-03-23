@@ -31,7 +31,7 @@ const Statistic: React.FC = () => {
                     </h2>
                 </div>
                 <div className="flex">
-                    <div className="w-full flex justify-start mt-20 px-32">
+                    <div className="w-full flex justify-start mt-20 px-32 flex-wrap lg:flex-nowrap">
                         <Image
                             width={200}
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqMJxDdU2XYmsdsfjdtO2YT1P0_5BUuQanwZE1-qpnXg&s"
@@ -44,7 +44,7 @@ const Statistic: React.FC = () => {
                                 Уровень 1
                             </h3>
                         </div>
-                        <div className="max-w-screen-xl mx-auto px-4 md:px-8 ">
+                        <div className="max-w-screen-xl mx-auto px-4 md:px-8 mt-10 lg:mt-0">
                             <ul className="flex flex-col items-center justify-center gap-x-12 gap-y-10 sm:flex-row sm:flex-wrap md:gap-x-24">
                                 {stats.map((item, idx) => (
                                     <li key={idx} className="text-center">
