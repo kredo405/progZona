@@ -31,16 +31,16 @@ const Statistic: React.FC = () => {
                     </h2>
                 </div>
                 <div className="flex">
-                    <div className="w-full flex justify-start mt-20 px-32 flex-wrap lg:flex-nowrap">
+                    <div className="w-full flex justify-center md:justify-start mt-20 md:px-32 flex-wrap lg:flex-nowrap">
                         <Image
                             width={200}
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqMJxDdU2XYmsdsfjdtO2YT1P0_5BUuQanwZE1-qpnXg&s"
                         />
-                        <div className="flex flex-col">
+                        <div className="flex flex-col md:mt-0 mt-3">
                             <h2 className="text-slate-100 font-mono font-bold text-2xl px-10">
                                 Илона Маскова
                             </h2>
-                            <h3 className="text-orange-500 font-mono font-bold text-2xl px-10 mt-10 animate-bounce animate-pulse animate-ping">
+                            <h3 className="text-orange-500 font-mono font-bold text-center md:text-start text-2xl px-10 mt-10 animate-bounce animate-pulse animate-ping">
                                 Уровень 1
                             </h3>
                         </div>
