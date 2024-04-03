@@ -38,7 +38,7 @@ const VerticalMenu = () => {
             ),
         },
         {
-            href: "/presonalAria/statistic",
+            href: "/presonalAria/dialogLesson",
             name: "Задачи",
             icon: (
                 <svg

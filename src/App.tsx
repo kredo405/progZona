@@ -9,10 +9,10 @@ import PersonalArea from "./pages/PersonalArea";
 import MyEducation from "./components/PersonalArea/MyEducation";
 import Statistic from "./components/PersonalArea/Statistic";
 import Course from "./pages/Course";
-import Lesson from "./pages/Lesson";
-import Themes from "./pages/Themes";
+import Lessons from "./pages/Lessons";
 import Discusions from "./pages/Discusions";
 import Test from "./pages/Test";
+import DialogLeson from "./pages/DialogLeson";
 
 function App() {
     return (
@@ -32,8 +32,11 @@ function App() {
                         path="/presonalAria/statistic"
                         element={<Statistic />}
                     />
-                    <Route path="/presonalAria/themes" element={<Themes />} />
-                    <Route path="/presonalAria/lesson" element={<Lesson />} />
+                    <Route
+                        path="/presonalAria/dialogLesson"
+                        element={<DialogLeson />}
+                    />
+                    <Route path="/presonalAria/lessons" element={<Lessons />} />
                 </Route>
             </Routes>
         </div>

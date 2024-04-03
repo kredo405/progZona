@@ -12,6 +12,21 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+::-webkit-scrollbar {
+    width: 10px; /* Ширина полосы прокрутки */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #262930; /* Цвет фона дорожки */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(119, 119, 152)22b; /* Цвет бегунка */
+    border-radius: 20px; /* Радиус скругления углов бегунка */
+    border: 3px solid#3b404d; /* Цвет и ширина рамки вокруг бегунка */
+  }
+  
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

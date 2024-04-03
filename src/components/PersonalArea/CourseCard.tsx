@@ -8,10 +8,16 @@ interface CourseCardProps {
     access: boolean;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ img, title, desc, level, access }) => {
+const CourseCard: React.FC<CourseCardProps> = ({
+    img,
+    title,
+    desc,
+    level,
+    access,
+}) => {
     return (
         <article className="max-w-sm mx-3 mt-16 md:mt-4 shadow-lg rounded-md duration-300 hover:bg-[#33394c] bg-[#292c35]">
-            <Link to="/presonalAria/themes">
+            <Link to="/presonalAria/lessons">
                 <img
                     src={img}
                     loading="lazy"
@@ -27,7 +33,11 @@ const CourseCard: React.FC<CourseCardProps> = ({ img, title, desc, level, access
                     <p className="text-slate-300 text-sm mt-1">{desc}</p>
                 </div>
                 <div className="flex justify-center h-[20%] w-full my-5 md:mr-2">
-                    <span className={access ? "text-green-500" : "text-red-500"}>{access ? "Доступен" : "Не доступен"}</span>
+                    <span
+                        className={access ? "text-green-500" : "text-red-500"}
+                    >
+                        {access ? "Доступен" : "Не доступен"}
+                    </span>
                 </div>
             </Link>
         </article>

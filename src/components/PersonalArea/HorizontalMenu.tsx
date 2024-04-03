@@ -62,7 +62,7 @@ const HorizontalMenu = () => {
                             to="/presonalAria/statistic"
                         >
                             <Avatar size={44} icon={<UserOutlined />} />
-                            <h3 className="text-slate-100 font-mono font-bold px-3">
+                            <h3 className="text-slate-100 hidden md:block font-mono font-bold px-3">
                                 Илона Маскова
                             </h3>
                         </Link>

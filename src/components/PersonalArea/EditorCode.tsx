@@ -43,8 +43,8 @@ const EditorCode = (task: EditorCodeProps) => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row w-full bg-[#212122]">
-            <div className="w-full flex flex-col justify-between md:w-3/12">
+        <div className="flex flex-col w-full ">
+            <div className="w-full flex flex-col justify-between mb-3 bg-[#212122]">
                 <div>
                     <h2 className="text-orange-500 font-mono font-bold text-center text-md px-5 mt-10">
                         {task.task}
@@ -68,7 +68,7 @@ const EditorCode = (task: EditorCodeProps) => {
                     <span className="text-lg">10</span>
                 </div>
             </div>
-            <div className="w-full md:w-9/12">
+            <div className="w-full">
                 <div className="flex justify-between bg-[#1a1d25] w-full">
                     <button className="text-slate-50 border-r-2 border-solid border-slate-800 px-4 py-3">
                         {files.name}
@@ -137,42 +137,6 @@ const EditorCode = (task: EditorCodeProps) => {
                         defaultLanguage={files.language}
                         defaultValue={files.value}
                     />
-                </div>
-                <div className="w-full">
-                    <div className="border-y-2 px-3 border-[#2d2d2d] border-solid flex justify-start items-center bg-[#202020] mx-0  w-full">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="w-6 h-6 text-slate-100"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-
-                        <span className="px-5 font-bold py-2 bg-[#202020] text-slate-100">
-                            Вывод:
-                        </span>
-                    </div>
-                    <div className="w-full px-3 h-[20vh] bg-[#202020] text-slate-100 mx-0">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1.5}
-                            stroke="currentColor"
-                            className="w-6 h-6 text-slate-100"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                            />
-                        </svg>
-                    </div>
                 </div>
             </div>
         </div>

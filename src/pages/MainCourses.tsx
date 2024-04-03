@@ -5,7 +5,7 @@ const MainCourses = () => {
         <>
             <Nav current="courses" />
             <div>
-                <h1 className="font-mono text-3xl md:text-5xl text-slate-100 text-center px-3 py-3 font-bold">
+                <h1 className=" flex font-mono text-3xl md:text-5xl text-slate-100 text-center px-3 py-3 font-bold">
                     Как
                     <span className="text-orange-500"> проходит </span>
                     обучение

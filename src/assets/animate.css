@@ -1,0 +1,13 @@
+#animatedText {
+    opacity: 0;
+    animation: appearText 1s forwards;
+  }
+  
+  @keyframes appearText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

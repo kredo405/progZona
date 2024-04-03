@@ -13,6 +13,7 @@ import Lesson from "./pages/Lesson";
 import Themes from "./pages/Themes";
 import Discusions from "./pages/Discusions";
 import Test from "./pages/Test";
+import DialogLesson from "./pages/DialogLeson";
 
 function App() {
     return (
@@ -31,6 +32,10 @@ function App() {
                     <Route
                         path="/presonalAria/statistic"
                         element={<Statistic />}
+                    />
+                    <Route
+                        path="/presonalAria/dialogLesson"
+                        element={<DialogLesson />}
                     />
                     <Route path="/presonalAria/themes" element={<Themes />} />
                     <Route path="/presonalAria/course" element={<Course />}>
