@@ -16,7 +16,7 @@ const PersonalArea = () => {
                 <HorizontalMenu />
             </div>
             <div
-                className="w-full px-2  md:pl-32 py-10"
+                className="w-full px-2 md:pl-[85px] py-6"
                 onClick={() => dispatch(setShow(false))}
             >
                 <Outlet />

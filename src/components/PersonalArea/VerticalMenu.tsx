@@ -102,7 +102,7 @@ const VerticalMenu = () => {
     return (
         <>
             {state.show ? (
-                <div className="z-20 ">
+                <div className="z-40 ">
                     <nav className="fixed top-0 left-0 w-56 h-full border-r border-slate-900 bg-[#1f222b] space-y-8 sm:w-64">
                         <div
                             onClick={handleClick}

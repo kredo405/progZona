@@ -1,6 +1,8 @@
 import dialogImg from "../assets/langi.png";
 import { useState } from "react";
 import AnimatedText from "../components/AnimatedText";
+import { useDispatch } from "react-redux";
+import { setfinishDialog } from "../store/slices/lessonSlice";
 
 export default function DialogLeson() {
     const [text, setText] =
@@ -13,12 +15,14 @@ export default function DialogLeson() {
         "Я уже знаком(a) с C#, но хочу обновить свои знания",
     ]);
 
+    const dispatch = useDispatch();
+
     const onButtonClick = (buttonText: string) => {
         if (buttonText.trim() === "Да, я готов начать изучение C#!") {
             setText(`Поздравляем! Ты сделал правильный выбор. Давай начнем наше увлекательное путешествие в мир C#.
              Первым шагом будет знакомство с основами языка, его синтаксисом и ключевыми концепциями. Готовься к
               захватывающим урокам и интересным заданиям!`);
-            setButtons(["Дальше"]);
+            setButtons(["Круто!"]);
         }
 
         if (
@@ -28,26 +32,28 @@ export default function DialogLeson() {
             setText(`Тогда наслаждайся изучением C#! Давай начнем наше увлекательное путешествие в мир C#.
              Первым шагом будет знакомство с основами языка, его синтаксисом и ключевыми концепциями.
               Готовься к захватывающим урокам и интересным заданиям!`);
-            setButtons(["Дальше"]);
+            setButtons(["Круто!"]);
         }
-        if (buttonText.trim() === "Дальше") {
+        if (buttonText.trim() === "Круто!") {
             setText(`После освоения основных концепций C# мы перейдем к более сложным темам,
              таким как объектно-ориентированное программирование, работа с базами данных,
               разработка веб-приложений и многое другое. Готовься к увлекательному и познавательному
                путешествию в мир разработки программного обеспечения!
             `);
-            setButtons(["Дальше"]);
+            setButtons(["Давай начнем"]);
         }
 
-        console.log(text);
+        if (buttonText.trim() === "Давай начнем") {
+            dispatch(setfinishDialog(true));
+        }
     };
 
     return (
-        <div className="mt-10">
-            <div className="flex py-5">
-                <div>
+        <div className="mt-2 z-10">
+            <div className="flex flex-col py-5">
+                <div className="flex justify-center">
                     <img
-                        className="w-[50px] h-[50px] md:w-[150px] md:h-[150px]"
+                        className="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
                         src={dialogImg}
                         alt="c#"
                     />

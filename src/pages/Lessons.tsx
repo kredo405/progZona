@@ -1,15 +1,12 @@
-import CodeHighlight from "../components/CodeHightLight";
-import EditorCode from "../components/PersonalArea/EditorCode";
-import TestResult from "../components/PersonalArea/TestResult";
-import Discusions from "./Discusions";
+import { useSelector, useDispatch } from "react-redux";
 import Lesson from "../components/PersonalArea/Lesson";
-import Test from "./Test";
-import { Link } from "react-router-dom";
 import TopicsBar from "../components/PersonalArea/TopicsBar";
 import { useState } from "react";
+import { RootState } from "../store";
+import DialogLeson from "./DialogLeson";
 
 const Lessons = () => {
-    const [finishTest, setFinishTest] = useState(false);
+    const state = useSelector((state: RootState) => state.lessonSlice);
 
     const task = {
         task: "Напишите программу, которая приветствует пользователя",
@@ -19,13 +16,13 @@ const Lessons = () => {
 
     return (
         <>
-            <div className="mt-10">
+            <div className="mt-14">
                 <div className="flex">
-                    <div className="w-2/12">
+                    <div className=" z-30">
                         <TopicsBar />
                     </div>
-                    <div className="w-10/12">
-                        <Lesson />
+                    <div className="w-full px-2 z-0">
+                        {state.finishDialog ? <Lesson /> : <DialogLeson />}
                     </div>
                 </div>
             </div>

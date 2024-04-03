@@ -42,11 +42,11 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
             id="animatedText"
         >
             {visibleText}
-            <div className="mt-10 flex justify-center">
+            <div className="mt-10 flex flex-col items-center justify-center">
                 {animationComplete && // Показываем кнопки только после завершения анимации текста
                     buttons.map((buttonText, index) => (
                         <button
-                            className="bg-orange-500 text-slate-200 font-mono px-5 py-3 rounded-lg hover:bg-orange-600 m-3"
+                            className="bg-orange-500 w-full text-slate-200 font-mono px-5 py-3 rounded-lg hover:bg-orange-600 m-3"
                             key={index}
                             onClick={() => onButtonClick(buttonText)}
                         >
