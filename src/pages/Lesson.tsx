@@ -51,7 +51,7 @@ const Lesson = () => {
                             Основы и ключевые концепции
                         </h4>
                     </div>
-                    <div className="text-slate-300 px-2 md:px-32">
+                    <div className="text-slate-300 px-2 lg:px-32">
                         <p className="font-mono py-2">
                             JavaScript является одним из самых популярных языков
                             программирования веб-разработки. Этот язык дает

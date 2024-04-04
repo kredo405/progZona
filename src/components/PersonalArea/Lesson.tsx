@@ -6,6 +6,7 @@ import Test from "../../pages/Test";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import NextLessonButton from "./NextLessonButton";
+import DidYouKnow from "./DidYouKnow";
 import gif from "../../assets/gif.gif";
 import gif1 from "../../assets/gif1.gif";
 import gif2 from "../../assets/Dmyf.gif";
@@ -28,7 +29,7 @@ const Lesson = () => {
                     </h2>
                 </div>
                 <div className="flex flex-col">
-                    <div className="text-slate-300 px-2 md:px-32">
+                    <div className="text-slate-300 px-2 lg:px-32">
                         <p className="font-mono py-2">
                             Язык программирования C# был разработан инженерами
                             компании Microsoft в период с 1998 по 2001 год.
@@ -95,6 +96,7 @@ const Lesson = () => {
                             синтаксические конструкции в C# имеют свои
                             собственные особенности, которые важно учитывать.
                         </p>
+                        <DidYouKnow text="C# поддерживает концепцию “LINQ” (Language Integrated Query), которая добавляет мощные возможности запросов к языку. LINQ позволяет разработчикам писать запросы прямо в C#, что упрощает работу с коллекциями данных. Это одна из особенностей C#, которая отличает его от многих других языков программирования." />
                         <div className="flex justify-center mt-5">
                             <h4 className="text-slate-200 text-xl font-semibold">
                                 Особенности языка С#
